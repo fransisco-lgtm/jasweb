@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>JasaWeb</title>
+
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+
+<nav class="navbar">
+
+  <div class="logo">JasaWeb</div>
+
+  <ul class="nav-links">
+    <li><a href="#home">Home</a></li>
+    <li><a href="#harga">Harga</a></li>
+    <li><a href="#layanan">Order</a></li>
+    <li><a href="#kontak">Kontak</a></li>
+  </ul>
+
+  <div class="hamburger" onclick="openMenu()">☰</div>
+
+</nav>
+
+<!-- MOBILE MENU -->
+
+<div class="mobile-menu" id="mobileMenu">
+
+  <div class="menu-header">
+    <div class="menu-logo">JasaWeb</div>
+    <div class="close-btn" onclick="closeMenu()">✕</div>
+  </div>
+
+  <ul>
+    <li><a href="#home" onclick="closeMenu()">Home</a></li>
+    <li><a href="#harga" onclick="closeMenu()">Harga</a></li>
+    <li><a href="#layanan" onclick="closeMenu()">Order</a></li>
+    <li><a href="#kontak" onclick="closeMenu()">Kontak</a></li>
+  </ul>
+
+</div>
+
+<!-- HERO -->
+
+<section class="hero" id="home">
+
+  <h1 class="hero-title">
+    <span id="changing-text"></span>
+  </h1>
+
+  <p class="hero-desc">
+    Kami membantu membuat website modern, cepat,
+    dan responsive untuk bisnis, portfolio,
+    atau usaha kamu.
+  </p>
+
+  <a href="#layanan" class="btn">Pesan Sekarang</a>
+
+</section>
+
+<!-- HARGA -->
+
+<section class="harga" id="harga">
+
+  <h2>Paket Harga Website</h2>
+
+  <div class="harga-container">
+
+    <div class="harga-card">
+
+      <h3>Paket Basic</h3>
+      <h1>Rp50.000</h1>
+
+      <ul>
+        <li>1 Halaman Website</li>
+        <li>Desain Sederhana</li>
+        <li>Responsive</li>
+        <li>HTML + CSS + JS Dasar</li>
+        <li>Form Kontak</li>
+        <li>Revisi 1–2x</li>
+      </ul>
+
+      <button onclick="pilihPaket('Basic')">Pilih Paket</button>
+
+    </div>
+
+    <div class="harga-card">
+
+      <h3>Paket Standard</h3>
+      <h1>Rp100.000</h1>
+
+      <ul>
+        <li>3–5 Halaman Website</li>
+        <li>Desain Profesional</li>
+        <li>Responsive Semua Device</li>
+        <li>Animasi JavaScript</li>
+        <li>Form Kontak + Validasi</li>
+        <li>Revisi 3–4x</li>
+      </ul>
+
+      <button onclick="pilihPaket('Standard')">Pilih Paket</button>
+
+    </div>
+
+    <div class="harga-card premium">
+
+      <h3>Paket Premium</h3>
+      <h1>Rp175.000</h1>
+
+      <ul>
+        <li>6–10 Halaman Website</li>
+        <li>Desain Custom Modern</li>
+        <li>Animasi Advanced</li>
+        <li>Integrasi API</li>
+        <li>SEO Dasar</li>
+        <li>Revisi 5x</li>
+      </ul>
+
+      <button onclick="pilihPaket('Premium')">Pilih Paket</button>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- ORDER -->
+
+<section class="order" id="layanan">
+
+  <h2>Order Website</h2>
+
+  <p class="order-desc">
+    Silahkan isi form berikut untuk memesan website.
+    Tim kami akan menghubungi kamu secepatnya.
+  </p>
+
+  <form class="order-form" id="orderForm">
+
+    <input type="text" placeholder="Nama Lengkap" id="nama" required>
+
+    <input type="email" placeholder="Email" id="email" required>
+
+    <input type="text" placeholder="Nomor WhatsApp" id="nomor" required>
+
+    <select id="paket" required>
+      <option value="">Pilih Paket Website</option>
+      <option value="Basic">Paket Basic</option>
+      <option value="Standard">Paket Standard</option>
+      <option value="Premium">Paket Premium</option>
+    </select>
+
+    <textarea placeholder="Deskripsi Website yang diinginkan" id="deskripsi"></textarea>
+
+    <button type="submit">Kirim Order</button>
+
+  </form>
+
+</section>
+
+<!-- KONTAK MEWAH -->
+
+<section class="kontak" id="kontak">
+
+  <h2>Kontak Kami</h2>
+  <p class="kontak-desc">Hubungi kami untuk pertanyaan atau pemesanan website. Kami akan merespon secepatnya.</p>
+
+  <div class="kontak-card">
+    <p>📱 WhatsApp</p>
+    <p></p>
+    <a href="https://wa.me/6285194729714" target="_blank" class="kontak-btn">Chat Sekarang</a>
+  </div>
+
+  <div class="kontak-card">
+    <p>📧 Email</p>
+    <p></p>
+    <a href="mailto:jasaweb@gmail.com" class="kontak-btn">Kirim Email</a>
+  </div>
+
+</section>
+
+<script src="script.js"></script>
+
+</body>
+  </html>
