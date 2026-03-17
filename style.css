@@ -1,0 +1,433 @@
+/* ==========================
+   RESET & GLOBAL
+========================== */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins', sans-serif;
+    scroll-behavior:smooth;
+}
+
+body{
+    background: linear-gradient(135deg,#020312,#050a3a,#1a0066);
+    color:white;
+    min-height:100vh;
+}
+
+/* ==========================
+   NAVBAR
+========================== */
+.navbar{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:12px 60px;
+    background:transparent;
+    position:fixed;
+    width:100%;
+    top:0;
+    left:0;
+    z-index:1000;
+}
+
+.logo{
+    font-size:22px;
+    font-weight:700;
+    color:#8b6cff;
+    text-shadow:0 0 12px #8b6cff;
+}
+
+.nav-links{
+    display:flex;
+    gap:35px;
+    list-style:none;
+}
+
+.nav-links a{
+    text-decoration:none;
+    color:white;
+    font-size:16px;
+    font-weight:500;
+    transition:0.3s;
+}
+
+.nav-links a:hover{
+    color:#8b6cff;
+    text-shadow:0 0 10px #8b6cff;
+}
+
+/* ==========================
+   HAMBURGER MOBILE
+========================== */
+.hamburger{
+    display:none;
+    font-size:28px;
+    cursor:pointer;
+}
+
+/* ==========================
+   MOBILE MENU
+========================== */
+.mobile-menu{
+    position:fixed;
+    top:-100%;
+    left:0;
+    width:100%;
+    height:40vh;
+    background:rgba(3,5,25,0.95);
+    backdrop-filter:blur(12px);
+    padding:20px 30px;
+    transition:0.4s;
+    z-index:1000;
+    border-bottom-left-radius:20px;
+    border-bottom-right-radius:20px;
+}
+
+.mobile-menu.active{
+    top:0;
+}
+
+.menu-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:25px;
+}
+
+.menu-logo{
+    font-size:22px;
+    color:#8b6cff;
+}
+
+.close-btn{
+    font-size:28px;
+    cursor:pointer;
+}
+
+.mobile-menu ul{
+    list-style:none;
+}
+
+.mobile-menu li{
+    margin:14px 0;
+}
+
+.mobile-menu a{
+    text-decoration:none;
+    color:white;
+    font-size:18px;
+}
+
+/* ==========================
+   HERO
+========================== */
+.hero{
+    min-height:85vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding-top:120px;
+    padding-left:20px;
+    padding-right:20px;
+}
+
+.hero-title{
+    font-size:44px;
+    color:#8b6cff;
+    text-shadow:0 0 25px #8b6cff;
+    margin-bottom:20px;
+    min-height:60px;
+}
+
+.hero-desc{
+    max-width:550px;
+    opacity:0.9;
+    line-height:1.7;
+    font-size:17px;
+}
+
+/* BUTTON HERO */
+.btn{
+    margin-top:30px;
+    padding:14px 38px;
+    background:linear-gradient(45deg,#6a5cff,#8b6cff);
+    border-radius:10px;
+    text-decoration:none;
+    color:white;
+    box-shadow:0 0 25px #8b6cff;
+    transition:0.3s;
+}
+
+.btn:hover{
+    transform:scale(1.05);
+    box-shadow:0 0 40px #8b6cff;
+}
+
+/* ==========================
+   HARGA / PAKET
+========================== */
+.harga{
+    padding:100px 20px;
+    text-align:center;
+}
+
+.harga h2{
+    font-size:36px;
+    margin-bottom:50px;
+    color:#8b6cff;
+    text-shadow:0 0 18px #8b6cff;
+}
+
+.harga-container{
+    display:flex;
+    justify-content:center;
+    gap:30px;
+    flex-wrap:wrap;
+}
+
+.harga-card{
+    width:280px;
+    background:rgba(255,255,255,0.05);
+    backdrop-filter:blur(20px);
+    border-radius:18px;
+    padding:30px;
+    border:1px solid rgba(255,255,255,0.1);
+    box-shadow:0 0 20px rgba(139,108,255,0.25);
+    transition:0.3s;
+}
+
+.harga-card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 0 35px rgba(139,108,255,0.5);
+}
+
+.harga-card h3{
+    margin-bottom:10px;
+    font-size:20px;
+}
+
+.harga-card h1{
+    color:#8b6cff;
+    margin-bottom:20px;
+}
+
+.harga-card ul{
+    list-style:none;
+    text-align:left;
+    margin-bottom:25px;
+}
+
+.harga-card ul li{
+    margin:8px 0;
+    opacity:0.85;
+}
+
+.harga-card button{
+    width:100%;
+    padding:12px;
+    border:none;
+    border-radius:10px;
+    background:linear-gradient(45deg,#6a5cff,#8b6cff);
+    color:white;
+    font-weight:600;
+    cursor:pointer;
+    box-shadow:0 0 20px #8b6cff;
+    transition:0.3s;
+}
+
+.harga-card button:hover{
+    transform:scale(1.05);
+    box-shadow:0 0 35px #8b6cff;
+}
+
+.premium{
+    border:1px solid #8b6cff;
+    box-shadow:0 0 40px rgba(139,108,255,0.5);
+}
+
+/* ==========================
+   ORDER / FORM
+========================== */
+.order{
+    padding:80px 20px;
+    margin-top:-40px;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+}
+
+.order h2{
+    font-size:34px;
+    margin-bottom:10px;
+    color:#8b6cff;
+    text-shadow:0 0 15px #8b6cff;
+}
+
+.order-desc{
+    opacity:0.8;
+    margin-bottom:40px;
+    text-align:center;
+    max-width:500px;
+}
+
+.order-form{
+    width:100%;
+    max-width:520px;
+    background:rgba(255,255,255,0.05);
+    backdrop-filter:blur(25px);
+    padding:35px;
+    border-radius:16px;
+    border:1px solid rgba(255,255,255,0.15);
+    box-shadow:0 0 30px rgba(139,108,255,0.3), inset 0 0 12px rgba(255,255,255,0.05);
+    display:flex;
+    flex-direction:column;
+    gap:18px;
+}
+
+.order-form input,
+.order-form textarea,
+.order-form select{
+    padding:14px;
+    border-radius:10px;
+    border:1px solid rgba(255,255,255,0.15);
+    background:rgba(255,255,255,0.05);
+    color:white;
+    font-size:14px;
+    outline:none;
+    transition:0.3s;
+}
+
+.order-form input::placeholder,
+.order-form textarea::placeholder{
+    color:rgba(255,255,255,0.5);
+}
+
+.order-form select option{
+    background:#0b0f2c;
+    color:white;
+}
+
+.order-form input:focus,
+.order-form textarea:focus,
+.order-form select:focus{
+    border:1px solid #8b6cff;
+    box-shadow:0 0 15px #8b6cff;
+}
+
+.order-form textarea{
+    height:120px;
+    resize:none;
+}
+
+.order-form button{
+    padding:14px;
+    border:none;
+    border-radius:10px;
+    background:linear-gradient(45deg,#6a5cff,#8b6cff);
+    color:white;
+    font-weight:600;
+    font-size:15px;
+    cursor:pointer;
+    box-shadow:0 0 25px #8b6cff;
+    transition:0.3s;
+}
+
+.order-form button:hover{
+    transform:translateY(-2px);
+    box-shadow:0 0 40px #8b6cff;
+}
+
+/* ==========================
+   KONTAK MEWAH
+========================== */
+.kontak{
+    padding:80px 20px;
+    text-align:center;
+}
+
+.kontak h2{
+    font-size:36px;
+    margin-bottom:20px;
+    color:#8b6cff;
+    text-shadow:0 0 20px #8b6cff;
+}
+
+.kontak-desc{
+    opacity:0.85;
+    margin-bottom:40px;
+    max-width:600px;
+    margin-left:auto;
+    margin-right:auto;
+    font-size:16px;
+    line-height:1.6;
+}
+
+.kontak-card{
+    background:rgba(255,255,255,0.05);
+    backdrop-filter:blur(20px);
+    padding:25px 30px;
+    border-radius:16px;
+    border:1px solid rgba(255,255,255,0.1);
+    box-shadow:0 0 25px rgba(139,108,255,0.3), inset 0 0 10px rgba(255,255,255,0.05);
+    margin:15px auto;
+    max-width:400px;
+    text-align:center;
+    transition:0.3s;
+}
+
+.kontak-card:hover{
+    transform:translateY(-5px);
+    box-shadow:0 0 45px rgba(139,108,255,0.5);
+}
+
+.kontak-card p{
+    margin:8px 0;
+    font-size:16px;
+    font-weight:500;
+}
+
+.kontak-btn{
+    display:inline-block;
+    margin-top:12px;
+    padding:12px 28px;
+    background:linear-gradient(45deg,#6a5cff,#8b6cff);
+    color:white;
+    text-decoration:none;
+    font-weight:600;
+    border-radius:10px;
+    box-shadow:0 0 25px #8b6cff;
+    transition:0.3s;
+}
+
+.kontak-btn:hover{
+    transform:scale(1.05);
+    box-shadow:0 0 50px #8b6cff;
+}
+
+/* ==========================
+   MOBILE RESPONSIVE
+========================== */
+@media(max-width:768px){
+    .navbar{
+        padding:12px 25px;
+    }
+    .nav-links{
+        display:none;
+    }
+    .hamburger{
+        display:block;
+    }
+    .hero-title{
+        font-size:32px;
+    }
+    .order-form{
+        padding:25px;
+    }
+    .harga-container{
+        flex-direction:column;
+        align-items:center;
+    }
+}
